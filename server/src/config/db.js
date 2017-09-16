@@ -10,11 +10,11 @@ mongoose.set('debug', true) // debug mode on
 
 try {
   mongoose.connect(constants.DB_URL, {
-    useMongoClient: true,
+    useMongoClient: true
   })
 } catch (err) {
   mongoose.createConnection(constants.DB_URL, {
-    useMongoClient: true,
+    useMongoClient: true
   })
 }
 
