@@ -10,12 +10,12 @@ import {
   UIManager,
 } from 'react-native'
 import { ApolloProvider } from 'react-apollo'
-
 import { ThemeProvider } from 'styled-components'
 import { store, client } from './src/store'
 import { colors } from './src/utils/constants'
 
-import HomeScreens from './src/screens/HomeScreen'
+import AppNavigation from './src/navigations'
+
 
 if (UIManager.setLayoutAnimationEnabledExperimental) {
   UIManager.setLayoutAnimationEnabledExperimental(true)
@@ -26,7 +26,7 @@ export default class mobile extends React.Component {
     return (
       <ApolloProvider store={store} client={client}>
         <ThemeProvider theme={colors}>
-          <HomeScreens />
+          <AppNavigation />
         </ThemeProvider>
       </ApolloProvider>
     )
