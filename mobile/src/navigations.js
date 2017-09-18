@@ -4,6 +4,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import { connect } from 'react-redux'
 import { colors } from './utils/constants'
 
+import AuthenticationScreen from './screens/AuthenticationScreen' 
 import HomeScreen from './screens/HomeScreen'
 import ExploreScreen from './screens/ExploreScreen'
 import NotificationsScreen from './screens/NotificationsScreen'
@@ -90,12 +91,16 @@ class AppNavigation extends Component {
       dispatch: this.props.dispatch,
       state: this.props.nav 
     })
+    if (!this.props.user.isAuthenticated) {
+      return <AuthenticationScreen />
+    }
     return <AppMainNav navigation={nav} /> 
   }
 }
 
 export default connect(state => ({
-  nav: state.nav
+  nav: state.nav,
+  user: state.user
 }))(AppNavigation)
 
 export const router = AppMainNav.router
