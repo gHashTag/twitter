@@ -25,10 +25,9 @@ const ButtonText = styled.Text`
   fontWeight: 500
   color: ${props => props.theme.LIGHT_GRAY}
 `
-const favoriteCount = 9
 const isFavorited = false 
 
-function FeedCardBottom() {
+function FeedCardBottom({ favoriteCount }) {
   return (
     <Root>
       <Bottom>

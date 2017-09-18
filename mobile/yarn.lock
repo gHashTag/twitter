@@ -6,7 +6,7 @@
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@appandflow/touchable/-/touchable-1.2.1.tgz#db066caf2f4701a0e09f589c68b91f13697d91cd"
 
-"@expo/vector-icons@^5.0.0", "@expo/vector-icons@^5.2.0":
+"@expo/vector-icons@^5.0.0":
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-5.2.0.tgz#877f75c00bf21313cdb231c92cbcfd40e46ee2a1"
   dependencies:
@@ -1552,6 +1552,10 @@ dashdash@^1.12.0:
   resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
   dependencies:
     assert-plus "^1.0.0"
+
+date-fns@^1.28.5:
+  version "1.28.5"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.28.5.tgz#257cfc45d322df45ef5658665967ee841cd73faf"
 
 dateformat@^2.0.0:
   version "2.0.0"

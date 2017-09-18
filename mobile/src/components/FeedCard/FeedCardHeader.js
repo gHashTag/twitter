@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/native'
+import distanceInWorldsToNow from 'date-fns/distance_in_words_to_now'
 import { Ava } from '../../utils/constants'
 
 const AVATAR_SIZE = 40
@@ -50,17 +51,12 @@ const MetaText = styled.Text`
   fontWeight: 600
   color: ${props => props.theme.LIGHT_GRAY}
 `
-const username = 'Playra'
-const firstName = 'Dmitriy' 
-const lastName = 'Vasilyev' 
-const createAt = '1 day ago'
-const avatar = Ava
 
-function FeedCardHeader() {
+function FeedCardHeader({ username, firstName, lastName, avatar, createdAt }) {
   return (
     <Root>
       <AvatarContainer>
-        <Avatar source= {{ uri: avatar }}/>
+        <Avatar source= {{ uri: avatar || Ava }}/>
       </AvatarContainer>
       <MetaContainer>
         <MetaTopContainer>
@@ -73,7 +69,7 @@ function FeedCardHeader() {
         </MetaTopContainer>
         <MetaBottomContainer>
           <MetaText>
-            {createAt}
+          {distanceInWorldsToNow(createdAt)} ago
           </MetaText>
         </MetaBottomContainer>
       </MetaContainer>
