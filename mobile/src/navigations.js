@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
+import { Keyboard } from 'react-native'
 import { addNavigationHelpers, StackNavigator, TabNavigator } from  'react-navigation'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { connect } from 'react-redux'
 import { colors } from './utils/constants'
 
 import AuthenticationScreen from './screens/AuthenticationScreen' 
+import NewTweetScreen from './screens/NewTweetScreen' 
 import HomeScreen from './screens/HomeScreen'
 import ExploreScreen from './screens/ExploreScreen'
 import NotificationsScreen from './screens/NotificationsScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import HeaderAvatar from './components/HeaderAvatar'
+import ButtonHeader from './components/ButtonHeader'
 
 const TAB_ICON_SIZE = 25
 
@@ -67,13 +70,42 @@ const Tabs = TabNavigator({
   }
 })
 
+const NewTweetModal = StackNavigator(
+  {
+    NewTweet: {
+      screen: NewTweetScreen,
+      navigationOptions: ({ navigation }) => ({
+        headerLeft: <HeaderAvatar />,
+        headerRight: (
+          <ButtonHeader side="right" onPress={() => {
+            Keyboard.dismiss()
+            navigation.goBack(null)
+          }}>
+            <Ionicons size={25} color={colors.PRIMARY} name="md-close"/>
+          </ButtonHeader>
+        )
+      })
+    }
+  }, {
+    headerMode: 'none'
+  }
+)
+
 const AppMainNav = StackNavigator({
   Home: {
     screen: Tabs,
-    navigationOptions: () => ({
-      headerLeft: <HeaderAvatar />
+    navigationOptions: ({ navigation }) => ({
+      headerLeft: <HeaderAvatar />,
+      headerRight: (
+        <ButtonHeader side="right" onPress={() => navigation.navigate('NewTweet')}>
+          <Ionicons size={25} color={colors.PRIMARY} name="md-create"/>
+        </ButtonHeader>
+      )
     })
   },
+  NewTweet: {
+    screen: NewTweetModal
+  }
 }, {
   cardStyle: {
     backgroundColor: '#F1F6FA'
