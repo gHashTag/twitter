@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@appandflow/touchable@^1.2.2":
+"@appandflow/touchable@^1.1.1":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@appandflow/touchable/-/touchable-1.2.2.tgz#134b6353e5ec98c5d6937116aa79dfede20166e1"
 
@@ -2585,6 +2585,12 @@ graphql-tag@^2.0.0, graphql-tag@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.4.2.tgz#6a63297d8522d03a2b72d26f1b239aab343840cd"
 
+graphql@0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.10.0.tgz#29e4f83d85e79245f8496f40a2232e6e5c5baaee"
+  dependencies:
+    iterall "^1.1.0"
+
 graphql@^0.10.0, graphql@^0.10.3:
   version "0.10.5"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.10.5.tgz#c9be17ca2bdfdbd134077ffd9bbaa48b8becd298"
@@ -4933,6 +4939,12 @@ rimraf@~2.2.6:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
 
+rn-placeholder@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/rn-placeholder/-/rn-placeholder-1.0.1.tgz#83271f4fedc687e512f8706bde35edf4e5908171"
+  dependencies:
+    prop-types "^15.5.10"
+
 rndm@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/rndm/-/rndm-1.2.0.tgz#f33fe9cfb52bbfd520aa18323bc65db110a1b76c"
@@ -5289,9 +5301,9 @@ stylis@^3.2.1:
   version "3.2.16"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.2.16.tgz#f336893e55f9f13299b39c01af3b10546cd7507a"
 
-subscriptions-transport-ws@^0.8.2:
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/subscriptions-transport-ws/-/subscriptions-transport-ws-0.8.3.tgz#d4b22db7f5951bd30e7c6f4dc4774d34ed9f1751"
+subscriptions-transport-ws@0.8.2:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/subscriptions-transport-ws/-/subscriptions-transport-ws-0.8.2.tgz#2325b3cff1bdcd824b60a8ba7135cdfeb6161091"
   dependencies:
     backo2 "^1.0.2"
     eventemitter3 "^2.0.3"
