@@ -109,7 +109,7 @@ class SignupForm extends Component {
     const avatar = Ava
 
     try {
-      const { data } =  await this.props.mutate({
+      const { data } = await this.props.mutate({
         variables: {
           fullName,
           email,
@@ -119,7 +119,7 @@ class SignupForm extends Component {
         }
       })
 
-      await AsyncStorage.setItem('@twitteryourtubeclone', data.signup.token)  
+      await AsyncStorage.setItem('@twitteryoutubeclone', data.signup.token)  
       this.setState({ loading: false })
       return this.props.login()
     } catch (e) {

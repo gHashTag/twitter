@@ -18,20 +18,19 @@ import { login } from './src/actions/user'
 
 import AppNavigation from './src/navigations'
 
-
 if (UIManager.setLayoutAnimationEnabledExperimental) {
   UIManager.setLayoutAnimationEnabledExperimental(true)
 }
 
 export default class mobile extends React.Component {
   componentWillMount() {
+    //AsyncStorage.removeItem("@twitteryoutubeclone") 
     this._checkIfToken()
   }
 
   _checkIfToken = async () => {
     try {
-      const token = await AsyncStorage.getItem('@twitteryourtubeclone') 
-      // const token = await AsyncStorage.removeItem('@twitteryourtubeclone') 
+      const token = await AsyncStorage.getItem('@twitteryoutubeclone')
       if(token != null) {
         store.dispatch(login())
       }

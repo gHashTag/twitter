@@ -2,7 +2,7 @@ export default `
   scalar Date
 
   type Status {
-    messege: String!
+    message: String!
   }
 
   type Auth {
@@ -18,7 +18,7 @@ export default `
     avatar: String
     createdAt: Date!
     updatedAt: Date!
-  } 
+  }
 
   type Me {
     _id: ID!
@@ -36,6 +36,7 @@ export default `
     text: String!
     user: User!
     favoriteCount: Int!
+    isFavorited: Boolean
     createdAt: Date!
     updatedAt: Date!
   }
@@ -51,8 +52,9 @@ export default `
     createTweet(text: String!): Tweet
     updateTweet(_id: ID!, text: String): Tweet
     deleteTweet(_id: ID!): Status
-    signup(email: String!, fullName: String!, password: String!, avatar: String, username: String): Auth 
-    login(email: String!, password: String!) : Auth 
+    favoriteTweet(_id: ID!): Tweet
+    signup(email: String!, fullName: String!, password: String!, avatar: String, username: String): Auth
+    login(email: String!, password: String!): Auth
   }
 
   type Subscription {
@@ -64,4 +66,4 @@ export default `
     mutation: Mutation
     subscription: Subscription
   }
-`
+`;

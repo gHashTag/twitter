@@ -4,4 +4,4 @@ export default {
   GRAPHQL_PATH: '/graphql',
   JWT_SECRET: 'thisisasecret123',
   SUBSCRIPTIONS_PATH: '/subscriptions'
-}
+};
