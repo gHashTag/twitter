@@ -25,24 +25,23 @@ const ButtonText = styled.Text`
   fontWeight: 500
   color: ${props => props.theme.LIGHT_GRAY}
 `
-const isFavorited = false 
 
-function FeedCardBottom({ favoriteCount }) {
+function FeedCardBottom({ favoriteCount, onFavoritePress, isFavorited }) {
   return (
     <Root>
       <Bottom>
         <Ionicons name="ios-chatbubbles-outline" size={ICON_SIZE} color={colors.LIGHT_GRAY} />
         <ButtonText>
-          {favoriteCount} 
+          0
         </ButtonText>
       </Bottom>
       <Bottom>
         <Ionicons name="md-repeat" size={ICON_SIZE} color={colors.LIGHT_GRAY} />
         <ButtonText>
-          {favoriteCount} 
+          0
         </ButtonText>
       </Bottom>
-      <Bottom>
+      <Bottom onPress={onFavoritePress}>
         <Ionicons name="ios-heart" size={ICON_SIZE} color={isFavorited ? 'red' : colors.LIGHT_GRAY} />
         <ButtonText>
           {favoriteCount} 
